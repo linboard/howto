@@ -1,0 +1,28 @@
+# base_install-debian_bullseye-2022.txt
+
++-----------------------------------------------------------+
+| Base Installation of Debian Bullseye (testing) bare metal |
++-----------------------------------------------------------+
+
+
+Do basic Debian install (see debian-stuff.txt)
+
+# apt-get -y install ntpdate mlocate tmux debian-goodies apticron dnsutils sntp ufw whois unzip tor certbot python3-certbot-nginx nginx wget mariadb-server
+
+# apt-get -y install php-fpm php-mysql
+
+# apt-get install -y python3-socks imagemagick python3-setuptools python3-cryptography python3-dateutil python3-idna python3-requests python3-flake8 python3-django-timezone-field python3-pyqrcode python3-png python3-bandit libimage-exiftool-perl
+
+# apt-get install -y php7.4 php7.4-fpm php7.4-mysql php-common php7.4-cli php7.4-common php7.4-json php7.4-opcache php7.4-readline php7.4-mbstring php7.4-xml php7.4-gd php7.4-curl php7.4-bcmath php7.4-gmp
+
+Make sure php7.4-fpm is running:
+
+# systemctl status php7.4-fpm
+
+
+------------------------------------------------------------------------
+
+Database (MariaDB)
+
+------------------------------------------------------------------------
+
