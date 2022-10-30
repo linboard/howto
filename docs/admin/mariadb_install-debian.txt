@@ -1,0 +1,45 @@
+# mariadb_install-debian.txt
+
++--------------------------------------------------------+
+| Installation of MariaDB on bare metal (non-dockerized) |
++--------------------------------------------------------+
+
+
+
+------------------------------------------------------------------------
+
+Database (MariaDB)
+
+------------------------------------------------------------------------
+
+
+Install mariadb:
+
+# apt-get -y install mariadb-server
+
+Run initial setup of MariaDB:
+
+# mysql_secure_installation
+
+Log into MariaDB's MySQL monitor:
+
+# mariadb
+
+Create NextCloud database and assign persmissions:
+
+MariaDB [(none)]> CREATE DATABASE nextcloud;
+
+MariaDB [(none)]> GRANT ALL PRIVILEGES ON nextcloud.* TO 'nextcloud'@'localhost' IDENTIFIED BY 'mypassword';
+
+(password for myhhost.one is 'password')
+
+MariaDB [(none)]> FLUSH PRIVILEGES;
+
+
+------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------
+
+# EOF
